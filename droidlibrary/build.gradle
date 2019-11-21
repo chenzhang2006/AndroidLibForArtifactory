@@ -46,7 +46,7 @@ publishing {
 //            from(components.java)
             groupId 'com.chenzhang2006.libraries'
             artifactId 'androidlibforartifactory'
-            version '1.0'
+            version '1.1'
             artifact("$buildDir/outputs/aar/droidlibrary-debug.aar")
         }
     }
