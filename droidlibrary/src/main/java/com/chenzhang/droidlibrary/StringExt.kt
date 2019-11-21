@@ -1,3 +1,3 @@
 package com.chenzhang.droidlibrary
 
-fun String.doubleLength() = this.length * 2
+fun String.doubleLength() = this.length * 3

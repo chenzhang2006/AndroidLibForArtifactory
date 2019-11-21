@@ -43,7 +43,7 @@ publishing {
         gpr(MavenPublication) {
             groupId 'com.chenzhang2006.libraries'
             artifactId 'androidlibforartifactory'
-            version '1.1.1'
+            version '1.1.1-SNAPSHOT'
             artifact("$buildDir/outputs/aar/droidlibrary-debug.aar")
         }
     }
