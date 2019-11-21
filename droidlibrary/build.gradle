@@ -1,6 +1,10 @@
+plugins {
+    id("maven-publish")
+}
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -23,6 +27,29 @@ android {
         }
     }
 
+}
+
+
+publishing {
+    repositories {
+        maven {
+            name = "AndroidLibForArtifactory"
+            url = uri("https://maven.pkg.github.com/chenzhang2006/AndroidLibForArtifactory")
+            credentials {
+                username = "chenzhang2006"
+                password = "871faedf718684ec37e73757d2c88bff73c273da"
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+//            from(components.java)
+            groupId 'com.chenzhang2006.libraries'
+            artifactId 'androidlibforartifactory'
+            version '1.0'
+            artifact("$buildDir/outputs/aar/droidlibrary-debug.aar")
+        }
+    }
 }
 
 dependencies {
