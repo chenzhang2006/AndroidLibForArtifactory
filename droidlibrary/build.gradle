@@ -38,6 +38,10 @@ publishing {
                 password = "871faedf718684ec37e73757d2c88bff73c273da"
             }
         }
+        maven {
+            name = 'customMavenRepo'
+            url = "file://${buildDir}/repo"
+        }
     }
     publications {
         gpr(MavenPublication) {
