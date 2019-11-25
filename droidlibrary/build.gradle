@@ -31,7 +31,7 @@ android {
 publishing {
     repositories {
         maven {
-            name = "AndroidLibForArtifactory"
+            name = "GithubPackageRegistry"
             url = uri("https://maven.pkg.github.com/chenzhang2006/AndroidLibForArtifactory")
             credentials {
                 username = "chenzhang2006"
@@ -39,16 +39,15 @@ publishing {
             }
         }
         maven {
-            name = 'customMavenRepo'
+            name = 'CustomMavenRepo'
             url = "file://${buildDir}/repo"
         }
     }
     publications {
-        gpr(MavenPublication) {
+        droidlib(MavenPublication) {
             groupId 'com.chenzhang2006.libraries'
-            artifactId 'androidlibforartifactory'
-            version '1.1.1-SNAPSHOT'
-            artifact("$buildDir/outputs/aar/droidlibrary-debug.aar")
+            artifactId 'droidlib'
+            version '1.0.1'
         }
     }
 }
