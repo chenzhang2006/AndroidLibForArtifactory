@@ -47,7 +47,8 @@ publishing {
         droidlib(MavenPublication) {
             groupId 'com.chenzhang2006.libraries'
             artifactId 'droidlib'
-            version '1.0.1'
+            version '1.0.4'
+            artifact("$buildDir/outputs/aar/droidlibrary-debug.aar")
         }
     }
 }
