@@ -19,6 +19,3 @@ jobs:
       env:
         GITHUB_USER: ${{ secrets.GITHUB_USER }}
         PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      with:
-        GITHUB_USER: ${{ secrets.GITHUB_USER }}
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
