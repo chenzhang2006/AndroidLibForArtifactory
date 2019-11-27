@@ -27,6 +27,10 @@ android {
 
 }
 
+def LIB_GROUP_ID = 'com.chenzhang2006.libraries'
+def LIB_ARTIFACT_ID = 'droidlib'
+def LIB_VERSION = '1.1.5'
+
 task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier "sources"
@@ -49,9 +53,9 @@ publishing {
     }
     publications {
         droidlib(MavenPublication) {
-            groupId 'com.chenzhang2006.libraries'
-            artifactId 'droidlib'
-            version '1.1.4'
+            groupId LIB_GROUP_ID
+            artifactId LIB_ARTIFACT_ID
+            version LIB_VERSION
             artifact("$buildDir/outputs/aar/droidlibrary-release.aar")
             artifact(sourceJar)
         }
