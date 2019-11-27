@@ -27,8 +27,8 @@ android {
             name = "AndroidLibForArtifactory"
             url = uri("https://maven.pkg.github.com/chenzhang2006/AndroidLibForArtifactory")
             credentials {
-                username = "chenzhang2006"
-                password = "05265d141a2304b994188a92f6b52fe98ddf76da"
+                username = System.getenv('GITHUB_USER') ?: project.properties['GITHUB_USER']
+                password = System.getenv('PERSONAL_ACCESS_TOKEN') ?: project.properties['PERSONAL_ACCESS_TOKEN']
             }
         }
     }
