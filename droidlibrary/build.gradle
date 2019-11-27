@@ -31,7 +31,7 @@ android {
 publishing {
     repositories {
         maven {
-            name = "GithubPackageRegistry"
+            name = "GithubPackages"
             url = uri("https://maven.pkg.github.com/chenzhang2006/AndroidLibForArtifactory")
             credentials {
                 username = System.getenv('GITHUB_USER') ?: project.properties['GITHUB_USER']
@@ -47,7 +47,7 @@ publishing {
         droidlib(MavenPublication) {
             groupId 'com.chenzhang2006.libraries'
             artifactId 'droidlib'
-            version '1.1.1'
+            version '1.1.2'
             artifact("$buildDir/outputs/aar/droidlibrary-release.aar")
         }
     }

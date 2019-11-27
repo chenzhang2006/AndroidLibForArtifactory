@@ -1,3 +1,3 @@
 package com.chenzhang.droidlibrary
 
-fun String.doubleLength() = this.length * 3
+fun String.getLengthMessage(): String = "\"$this\" has ${this.length} characters"
