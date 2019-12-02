@@ -29,7 +29,7 @@ android {
 
 def LIB_GROUP_ID = 'com.chenzhang2006.libraries'
 def LIB_ARTIFACT_ID = 'droidlib'
-def LIB_VERSION = '1.1.5'
+def LIB_VERSION = '1.1.8'
 
 task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
