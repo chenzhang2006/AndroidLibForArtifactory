@@ -1,2 +1,2 @@
-include ':app', ':droidlibrary'
+include ':app', ':droidlibrary', ':droidlibrary2'
 rootProject.name='AndroidLibForArtifactory'
