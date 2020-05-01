@@ -1,3 +1,3 @@
 package com.chenzhang.droidlibrary
 
-fun String.getPublishingMessage(): String = "\"$this\" from Github Packages(Manual)"
+fun String.getMessageFromTransitiveDependency(): String = "\"$this\" from Transitive Dependency"

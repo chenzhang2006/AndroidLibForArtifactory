@@ -1,5 +1,3 @@
 package com.chenzhang.droidlibrary2
 
-import com.chenzhang.droidlibrary.getPublishingMessage
-
-fun String.getDecoratedMessage() = this.getPublishingMessage() + ", Yey!"
+fun String.getMessageFromDirectDependency() = "\"$this\" from Direct Dependency"

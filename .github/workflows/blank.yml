@@ -18,4 +18,4 @@ jobs:
         ./gradlew build publish
       env:
         GITHUB_USER: ${{ secrets.GITHUB_USER }}
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}

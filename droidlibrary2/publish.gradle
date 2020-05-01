@@ -1,8 +1,8 @@
 apply plugin: 'maven-publish'
 
 def LIB_GROUP_ID = 'com.chenzhang2006.libraries'
-def LIB_ARTIFACT_ID = 'droidlib'
-def LIB_VERSION = '2.0.1'
+def LIB_ARTIFACT_ID = 'droidlib2'
+def LIB_VERSION = '3.0.1'
 
 task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -25,12 +25,25 @@ publishing {
         }
     }
     publications {
-        droidlib(MavenPublication) {
+        droidlib2(MavenPublication) {
             groupId LIB_GROUP_ID
             artifactId LIB_ARTIFACT_ID
             version LIB_VERSION
-            artifact("$buildDir/outputs/aar/droidlibrary-release.aar")
+            artifact("$buildDir/outputs/aar/droidlibrary2-release.aar")
             artifact(sourceJar)
+
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+
+                //Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
+                configurations.api.allDependencies.each {
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.group)
+                    dependencyNode.appendNode('artifactId', it.name)
+                    dependencyNode.appendNode('version', it.version)
+                }
+            }
         }
     }
 }
+
