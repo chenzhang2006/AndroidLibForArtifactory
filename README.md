@@ -1,5 +1,8 @@
 ## Demo App to publish Android libraries to Github Packages
-Goals To achieve:
+
+**Medium Blogpost**: https://proandroiddev.com/android-libraries-on-github-packages-21f135188d58
+
+**Goals To achieve**:
 
 ![Architecture Diagram](diagram.png)
 
